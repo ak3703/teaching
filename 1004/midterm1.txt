@@ -1,0 +1,134 @@
+Anthony Kim
+1004 Midterm 1 Review Session
+10/14/16
+
+
+===============
+Primitive types
+===============
+boolean , byte , char , short , int , long , float and double 
+
+Java                Type        Value
+2-3
+1.2 / 2.4 + 1
+(char)('c' - 1)
+(double)(9 / 10)
+9 / (double)(10)
+11 % 3 - 9
+!('d' < 'm')
+1.0 + 2 + "3"
+
+================
+     Scope
+================
+Class Level
+public class Person {
+    private String name;
+    private int age;
+}
+
+Method Scope
+public int getAge(){
+   int x = 5; 
+}
+
+Loop Scope
+for (int i=0; i<10; i++) {
+    System.out.println(i);
+}
+
+ 
+================
+   Parameters 
+================
+Actual parameter
+    Argument
+
+Explicit parameter
+    Actual value
+
+Formal paremeter
+     the identifier used in a method to stand for the value that is passed into 
+the method by a caller.
+
+Implicit paremeter
+    Object variable before method name in the method call
+    ex. this
+
+================
+    Methods
+================
+Getters
+Setters
+Let's talk about "public static void main(String[] args)"
+
+================
+Arrays / ArrayList??
+================
+
+================
+Runtime
+================
+constant
+logarithmically
+linear
+exponentially 
+
+================
+   Sorting 
+================
+Insertion Sort
+Selection Sort
+
+================
+    Strings
+================
+.equals()
+.substring()
+.length()
+.toUpperCase()
+.charAt()
+
+================
+    if / else
+================
+The following code prints nine letters. Write what it prints.
+
+for (int i=1; i<4; i++) {
+    for (int j=0; j<3; j++) {
+        if (i == j) {
+            if (i%2 == 0) {
+                System.out.print("A");
+            } else {
+                System.out.print("B");
+            }
+        } else if (i == 1 || j == 1) {
+            System.out.print("C");
+        } else {
+            if (2*j <= 1) {
+                System.out.print("D");
+            } else {
+                System.out.print("E");
+            }
+        }
+    }
+    System.out.print("\n");
+}
+================
+     Loops    
+================
+Re-write the following for loop as a while loop:
+
+for (int i=0; i<23; i=i+4) {
+    System.out.println(i * 3);
+}
+
+================
+     Other
+================
+Scanner input = new Scanner(System.in);
+System.out.print("enter an integer: ");
+int x = input.nextInt();
+System.out.print("enter another integer: ");
+int y = input.nextInt();
+System.out.println("x: " + x + "y: " + y);
