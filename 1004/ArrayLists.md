@@ -78,3 +78,8 @@ Collections.sort(list);
 | list.set(i,e)    |               | Sets the element at index i to e.                           |
 | list.contains(e) | boolean       | Returns true if list contains e                             |
 | list.indexOf(e)  | int           | Returns index of first occurrence of e, or -1 if not there. |
+
+### Useful Resources
+* Your best friend, official Java documentation: https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html
+* Google + Stackoverflow (ex: "Print out last element of arraylist java")
+* Practice! 
