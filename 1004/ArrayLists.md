@@ -10,41 +10,54 @@ Standard Java **arrays** are of a fixed length. After arrays are created, they c
 **ArrayLists** are created with an initial size. When this size is exceeded, the collection is automatically enlarged. When objects are removed, the array may be shrunk.
 
 Benefits of ArrayLists:
-An ArrayList automatically expands as data is added.
-Access to any element of an ArrayList is O(1). Insertions and deletions are O(N).
-An ArrayList has methods for inserting, deleting, and searching.
-An ArrayList can be traversed using a foreach loop, iterators, or indexes.
-Use ArrayList when there will be a large variation in the amount of data that you would put into an array. Arrays should be used only when there is a constant amount of data. For example, storing information about the days of the week should use an array because the number of days in a week is constant. Use an array list for your email contact list because there is no upper bound on the number of contacts.
+* An ArrayList automatically expands as data is added. Particularly useful when there's a large variation in amount of data you would put into an array. (good example: your email contact list. bad example: days of the week.)
+* Access to any element of an ArrayList is fast! O(1). Insertions and deletions are O(N).
+* An ArrayList has methods for inserting, deleting, and searching.
+* An ArrayList can be traversed using a foreach loop, iterators, or indexes.
 
-A possible disadvantage of ArrayList is that it holds only object types and not primitive types (eg, int). To use a primitive type in an ArrayList, put it inside an object or use of the wrapper classes (eg, Integer, Double, Character, ...). The wrapper classes are immutable, so if you use, eg, Integer, you will not be able to change the integer value. In this case it may be more useful to define your own mutable class.
+Disadvantages:
+* Only holds object types and not primitive types (eg, int). To use a primitive type in an ArrayList, put it inside an object or use of the wrapper classes (eg, Integer, Double, Character, ...) but remember that wrapper classes are immutable. 
 
-Initialize an ArrayList
+## Common Things to Do with ArrayLists
+
+### Initialize an ArrayList
+```
 ArrayList<String> list = new ArrayList<String>();
+```
 
-Common Things to Do with ArrayLists
-Adding
+### Adding
+```
 list.add("A");
 list.add("B");
 list.add("C");
+```
 
-Getting
-s = a.get(i); // Assigns ith element from a to s.
+### Accessing
+```
+String s = list.get(1);
+```
+What is s? 
 
-Deleting
-
-Printing out each element
+### Printing out each element
+```
 for (int i = 0; i < a.size(); i++) {
     System.out.println(a.get(i));
 }
+```
 
+### Removing
+```
+list.remove(2);
+```
 
-Sorting
-Collections.sort(yourArrayList);
+### Sorting
+```
+Collections.sort(list);
+```
 
-
-Other useful ArrayList methods
-	a.set(i,e)	Sets the element at index i to e.
-  	a.toArray()
-    b = 	a.contains(e)	Returns true if ArrayList a contains e
-    a.indexOf(e)	Returns index of first occurrence of e, or -1 if not there.
-    a.remove(i)	Removes the element at position i.
+### Other useful ArrayList methods
+| Method Name      | Return Type   | Description                                                 |
+| ---------------- |:-------------:| -----------------------------------------------------------:|
+| list.set(i,e)    |               | Sets the element at index i to e.                           |
+| list.contains(e) | boolean       | Returns true if list contains e                             |
+| list.indexOf(e)  | int           | Returns index of first occurrence of e, or -1 if not there. |
