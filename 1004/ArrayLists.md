@@ -39,9 +39,26 @@ String s = list.get(1);
 What is s? 
 
 ### Printing out each element
+For Loop
 ```
 for (int i = 0; i < a.size(); i++) {
     System.out.println(a.get(i));
+}
+```
+
+While Loop
+```
+int j = 0;
+while (j < list.size()){
+    System.out.println(list.get(j));
+    j++;
+}
+```
+
+Enhanced for loop
+```
+for (String string: list){
+    System.out.println(string);
 }
 ```
 
@@ -57,7 +74,7 @@ Collections.sort(list);
 
 ### Other useful ArrayList methods
 | Method Name      | Return Type   | Description                                                 |
-| ---------------- |:-------------:| -----------------------------------------------------------:|
+| ---------------- | ------------- | ----------------------------------------------------------- |
 | list.set(i,e)    |               | Sets the element at index i to e.                           |
 | list.contains(e) | boolean       | Returns true if list contains e                             |
 | list.indexOf(e)  | int           | Returns index of first occurrence of e, or -1 if not there. |
