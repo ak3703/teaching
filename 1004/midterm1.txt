@@ -63,16 +63,12 @@ Setters
 Let's talk about "public static void main(String[] args)"
 
 ================
-Arrays / ArrayList??
-================
-
-================
 Runtime
 ================
 constant
-logarithmically
+logarithmic
 linear
-exponentially 
+polynomial
 
 ================
    Sorting 
